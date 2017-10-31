@@ -1,0 +1,150 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a [routerLink]="['../../dashboard']">Home</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a [routerLink]="['../../users/view-users']">Users</a>
+    </li>
+    <li class="breadcrumb-item">
+        <a>Add Users</a>
+    </li>
+</ol>
+<form id="userForm" [formGroup]="userForm">
+<div class="card mb-3">
+    <div class="card-header">
+        User's Registration Form
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <select id="position" name="position" class="form-control form-control-sm drop" [(ngModel)]="positionTest" formControlName="position">
+                    <option [ngValue]="selected" selected="true">Select the post</option>
+                    <option [ngValue]="admin">Admin</option>
+                    <option [ngValue]="contentIndividual">Content Provider (Individual)</option>
+                    <option [ngValue]="contentInstitute">Content Provider (Institute)</option>
+                    <option [ngValue]="contentAuthorizer">Content Authorizer</option>
+                    <!-- <option [ngValue]="contentConsumer">Content Consumer</option> -->
+                </select>
+
+                <div *ngIf="userForm.controls['position'].hasError('required') && userForm.controls['position'].touched" class="error">
+                    Select the position !
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <!-- individual drop down list -->
+                    <select id="individualDrop" name="individualDrop" class="form-control form-control-sm drop" 
+                    [(ngModel)]="individual" formControlName="individualDrop"
+                    *ngIf="positionTest==contentIndividual">
+                        <option [ngValue]="individual1">Content Provider 1</option>
+                        <option [ngValue]="individual2">Content Provider 2</option>
+                        <option [ngValue]="individual3">Content Provider 3</option>
+                        <option [ngValue]="individual4">Content Provider 4</option>
+                        <option [ngValue]="individual5">Content Provider 5</option>
+                    </select>
+                
+                <!-- institute drop down list -->
+                    <select id="instituteDrop" name="instituteDrop" class="form-control form-control-sm drop" 
+                    [(ngModel)]="individual" formControlName="instituteDrop"
+                    *ngIf="positionTest==contentInstitute">
+                        <option [ngValue]="institute1">Institute 1</option>
+                        <option [ngValue]="institute2">Institute 2</option>
+                        <option [ngValue]="institute3">Institute 3</option>
+                        <option [ngValue]="institute4">Institute 4</option>
+                        <option [ngValue]="institute5">Institute 5</option>
+                    </select>
+                
+                <!-- authorizer drop down list -->
+                    <select id="authorizerDrop" name="authorizerDrop" class="form-control form-control-sm drop" 
+                    [(ngModel)]="individual" formControlName="authorizerDrop"
+                    *ngIf="positionTest==contentAuthorizer">
+                        <option [ngValue]="authorizer1">Authorizer 1</option>
+                        <option [ngValue]="authorizer2">Authorizer 2</option>
+                        <option [ngValue]="authorizer3">Authorizer 3</option>
+                        <option [ngValue]="authorizer4">Authorizer 4</option>
+                        <option [ngValue]="authorizer5">Authorizer 5</option>
+                    </select>
+                
+                <!-- consumer drop down list -->
+                    <!-- <select id="consumerDrop" name="consumerDrop" class="form-control form-control-sm drop" 
+                    [(ngModel)]="individual" formControlName="consumerDrop"
+                    *ngIf="positionTest==contentConsumer">
+                        <option [ngValue]="consumer1">consumer 1</option>
+                        <option [ngValue]="consumer2">consumer 2</option>
+                        <option [ngValue]="consumer3">consumer 3</option>
+                        <option [ngValue]="consumer4">consumer 4</option>
+                        <option [ngValue]="consumer5">consumer 5</option>
+                    </select> -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+            <label for="firstName">Identification No: </label>
+            <input class="form-control form-control-sm" id="identificationNo" name="identificationNo" [(ngModel)]="idNo" type="text" formControlName="identificationNo" readonly>
+            </div>
+            <div class="col-md-6">
+            
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="fullName">Full Name: </label>
+                <input class="form-control form-control-sm" id="fullName" type="text" name="fullName" formControlName="fullName" [(ngModel)]="fName">
+
+                <div *ngIf="userForm.controls['fullName'].hasError('required') && userForm.controls['fullName'].touched" class="error">
+                    Full name is required !
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="emailAddress">Email Address:</label>
+                <input class="form-control form-control-sm" id="email" type="text" name="email" formControlName="email" [(ngModel)]="fEmail">
+
+                <div *ngIf="userForm.controls['email'].hasError('required') && userForm.controls['email'].touched" class="error">
+                    Email is required !
+                </div>
+                <div *ngIf="userForm.controls['email'].hasError('pattern') && userForm.controls['email'].touched" class="error">
+                    Email is invalid !
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="password1">Password: </label>
+                <input class="form-control form-control-sm" id="password1" type="password" name="password1" formControlName="password1" [(ngModel)]="fPassword1">
+
+                <div *ngIf="userForm.controls['password1'].hasError('required') && userForm.controls['password1'].touched" class="error">
+                    Enter the password !
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="password2">Conform Password:</label>
+                <input class="form-control form-control-sm" id="password2" type="password" name="password2" formControlName="password2" [(ngModel)]="fPassword2">
+
+                <div *ngIf="userForm.controls['password2'].hasError('required') && userForm.controls['password2'].touched" class="error">
+                    Confirm the password !
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                &emsp;<button type="submit" id="submit" name="submit" class="btn-primary search_btn" [disabled]="!userForm.valid">Submit</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</form>

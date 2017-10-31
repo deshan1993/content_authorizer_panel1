@@ -1,0 +1,260 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">Content Provider Panel</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" [routerLink]="['cp-dashboard']">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profile">
+          <a class="nav-link" [routerLink]="['cp-profile']">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text">Profile</span>
+          </a>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Submissions">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#subList" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file-text-o"></i>
+            <span class="nav-link-text" [routerLink]="['submissions/cp-single-submission']">Submissions</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="subList">
+            <li>
+              <a [routerLink]="['submissions/cp-single-submission']">Single Submission</a>
+            </li>
+            <li>
+              <a [routerLink]="['submissions/cp-multiple-submission']">Multiple Submission</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="History">
+          <a class="nav-link" [routerLink]="['cp-history']">
+            <i class="fa fa-fw fa-history"></i>
+            <span class="nav-link-text">Submission History</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Authorizers' Details">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#authorList" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text" [routerLink]="['content-authorizer/view-authorizers']">Content Authorizer</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="authorList">
+            <li>
+              <a [routerLink]="['content-authorizer/view-authorizers']">View Authorizers</a>
+            </li>
+            <li>
+              <a [routerLink]="['content-authorizer/add-authorizers']">Add Authorizers</a>
+            </li>
+          </ul>
+        </li> -->
+
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Providers' Details">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#providerList" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text" [routerLink]="['content-provider/view-providers']">Content Provider</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="providerList">
+            <li>
+              <a [routerLink]="['content-provider/view-providers']">View Providers</a>
+            </li>
+            <li>
+              <a [routerLink]="['content-provider/add-providers']">Add Providers</a>
+            </li>
+          </ul>
+        </li> -->
+
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consumers' Details">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#consumerList" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text" [routerLink]="['content-consumer/view-consumers']">Content Consumer</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="consumerList">
+            <li>
+              <a [routerLink]="['content-consumer/view-consumers']">View Consumers</a>
+            </li>
+            <li>
+              <a [routerLink]="['content-consumer/add-consumers']">Add Consumers</a>
+            </li>
+          </ul>
+        </li> -->
+
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reports">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#reportList" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file-text"></i>
+            <span class="nav-link-text" [routerLink]="['reports/content-authorizer-report']">Reports</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="reportList">
+            <li>
+              <a [routerLink]="['reports/content-authorizer-report']">Content Authorizer</a>
+            </li>
+            <li>
+              <a [routerLink]="['reports/content-provider-report']">Content Provider</a>
+            </li>
+          </ul>
+        </li> -->
+
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Content Provider">
+          <a class="nav-link" [routerLink]="['/content-provider']">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Content Provider</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Content Authorizer">
+          <a class="nav-link" [routerLink]="['/content-authorizer']">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Content Authorizer</span>
+          </a>
+        </li> -->
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item dropdown" style="margin-right:35px;">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="settingsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-gear"></i>
+            <span class="d-lg-none">Settings</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="settingsDropdown" style="background:#343a40; width:50%">
+              <a class="nav-link" [routerLink]="['users/change-password']">
+                <i class="fa fa-fw fa-expeditedssl"></i>Change Password</a>
+              
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+          </div>
+          
+        </li> -->
+
+        <ul class="nav pull-right">
+            <li class="dropdown"><a href="#" class="dropdown-toggle logger_name" data-toggle="dropdown">Hi, Deshan<b class="caret"></b></a>
+                <ul class="dropdown-menu" style="background:#343a40;">
+                    <li><a class="nav-link" [routerLink]="['users/change-password']">
+                      <i class="fa fa-fw fa-expeditedssl"></i>Change Password</a></li>
+                    <li><a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-bell"></i>
+            <span class="d-lg-none">Alerts
+              <span class="badge badge-pill badge-warning">6 New</span>
+            </span>
+            <span class="indicator text-warning d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+            <h6 class="dropdown-header">New Alerts:</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-danger">
+                <strong>
+                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item small" href="#">View all alerts</a>
+          </div>
+        </li> -->
+
+        <!-- <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0 mr-lg-2">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+    <div class="content-wrapper">
+    
+    <div class="container-fluid" style="margin-top: 55px;">
+        <div class="site">
+            <main class="content">            
+                <router-outlet></router-outlet>
+            </main>
+        </div>
+        <br>
+        <footer class="sticky-footer">
+                <div class="container">
+                    <div class="text-center">
+                    <small>Copyright © Smart Education Platform 2017</small>
+                    </div>
+                </div>
+            </footer>
+    </div>
+
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    
+    
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" [routerLink]="['login-page']">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
