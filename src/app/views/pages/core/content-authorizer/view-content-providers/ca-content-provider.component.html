@@ -12,6 +12,27 @@
     <div class="card-header">
         <i class="fa fa-table"></i>&emsp;<b>Content Providers List</b></div>
     <div class="card-body">
+        <!-- <div class="row">
+            <div class="col-md-3">
+                <input type="text" class="form-control form-control-sm" id="providerId">
+            </div>
+            <div class="col-md-3">
+                <input type="text">
+            </div>
+            <div class="col-md-3">
+                <input type="text">
+            </div>
+            <div class="col-md-3">
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div> -->
+
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTableProviders" width="100%" cellspacing="0">
                 <thead>
@@ -23,7 +44,6 @@
                         <th>Rejected</th>
                         <th>Enable/ Disable</th>
                         <th data-orderable="false">View</th>
-                        <th data-orderable="false">Delete</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -41,19 +61,11 @@
                             <a href="">2</a>
                         </td>
                         <td align="center">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
+                            Enabled <i class="fa fa-slack"></i>
                         </td>
                         <td align="center">
                             <a href="">
                                 <li class="fa  fa-1x fa-pencil-square-o"></li>
-                            </a>
-                        </td>
-                        <td align="center">
-                            <a data-toggle="modal" data-target="#deleteModal">
-                                <li class="fa  fa-1x fa-trash"></li>
                             </a>
                         </td>
                     </tr>
@@ -68,19 +80,11 @@
                             <a href="">5</a>
                         </td>
                         <td align="center">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
+                                Disabled <i class="fa fa-slack" style="color: grey"></i>
                         </td>
                         <td align="center">
                             <a href="">
                                 <li class="fa  fa-1x fa-pencil-square-o"></li>
-                            </a>
-                        </td>
-                        <td align="center">
-                            <a data-toggle="modal" data-target="#deleteModal">
-                                <li class="fa  fa-1x fa-trash"></li>
                             </a>
                         </td>
                     </tr>

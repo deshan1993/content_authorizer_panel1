@@ -158,6 +158,11 @@ div table{
     margin-bottom: 10px;
     font-size: 14px;
   }
+
+  .historyLabel{
+    font-size:12px;
+    color: grey;
+  }
   
   #description1{
     height: 100px;
@@ -171,4 +176,8 @@ div table{
   .group-btn{
     padding-top: 4px;
     padding-bottom: 4px;
+  }
+  
+  div label{
+	  margin-top: 10px;
   }

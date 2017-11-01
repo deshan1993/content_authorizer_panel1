@@ -36,6 +36,12 @@ import { BooksComponent } from './views/pages/core/content-authorizer/content-au
 import { CaseStudyComponent } from './views/pages/core/content-authorizer/content-authorization/case-study/ca-case-study.component';
 import { ImagesComponent } from './views/pages/core/content-authorizer/content-authorization/images/ca-images.component';
 import { VideoClipComponent } from './views/pages/core/content-authorizer/content-authorization/video-clip/ca-video-clip.component';
+import { ArticlesHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/articles/articles-history.component';
+import { AudioClipHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/audio-clip/audio-clip-history.component';
+import { BooksHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/books/books-history.component';
+import { CaseStudyHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/case-study/case-study-history.component';
+import { ImagesHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/images/images-history.component';
+import { VideoClipHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/video-clip/video-clip-history.component';
 
 
 export const routes: Routes = [
@@ -77,7 +83,16 @@ export const routes: Routes = [
     {path: 'ca-video-clip', component: VideoClipComponent}
   ]
 },
-  { path: 'ca-authorization-history', component: AuthorizationHistoryComponent},
+  { path: 'ca-authorization-history', component: AuthorizationHistoryComponent,
+  children: [
+    {path: 'ca-articles-history', component: ArticlesHistoryComponent},
+    {path: 'ca-audio-clip-history', component: AudioClipHistoryComponent},
+    {path: 'ca-books-history', component: BooksHistoryComponent},
+    {path: 'ca-case-study-history', component: CaseStudyHistoryComponent},
+    {path: 'ca-images-history', component: ImagesHistoryComponent},
+    {path: 'ca-video-clip-history', component: VideoClipHistoryComponent}
+  ]
+},
   { path: 'ca-content-providers', component: ViewContentProvidersComponent},
   { path: '', redirectTo: 'ca-dashboard', pathMatch: 'full' },
 ];

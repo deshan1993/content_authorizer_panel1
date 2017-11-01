@@ -82,6 +82,12 @@ import { BooksComponent } from './views/pages/core/content-authorizer/content-au
 import { CaseStudyComponent } from './views/pages/core/content-authorizer/content-authorization/case-study/ca-case-study.component';
 import { ImagesComponent } from './views/pages/core/content-authorizer/content-authorization/images/ca-images.component';
 import { VideoClipComponent } from './views/pages/core/content-authorizer/content-authorization/video-clip/ca-video-clip.component';
+import { ArticlesHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/articles/articles-history.component';
+import { AudioClipHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/audio-clip/audio-clip-history.component';
+import { BooksHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/books/books-history.component';
+import { CaseStudyHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/case-study/case-study-history.component';
+import { ImagesHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/images/images-history.component';
+import { VideoClipHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/video-clip/video-clip-history.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -128,12 +134,21 @@ export function startupServiceFactory(startupService: StartupService): Function 
     ContentAuthorizationComponent,
     AuthorizationHistoryComponent,
     ViewContentProvidersComponent,
+
     ArticlesComponent,
     AudioClipComponent,
     BooksComponent,
     CaseStudyComponent,
     ImagesComponent,
-    VideoClipComponent
+    VideoClipComponent,
+
+    ArticlesHistoryComponent,
+    AudioClipHistoryComponent,
+    BooksHistoryComponent,
+    CaseStudyHistoryComponent,
+    ImagesHistoryComponent,
+    VideoClipHistoryComponent
+
   ],
   imports: [
     BrowserModule,
