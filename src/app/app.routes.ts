@@ -25,6 +25,17 @@ import { ContentProviderProfileComponent } from './views/pages/core/content-prov
 import { SingleSubmissionComponent } from './views/pages/core/content-provider/submissions/single-submission/single-submission.component';
 import { MultipleSubmissionComponent } from './views/pages/core/content-provider/submissions/multiple-submission/multiple-submission.component';
 import { ContentProviderHistoryComponent } from './views/pages/core/content-provider/history/content-provider-history.component';
+import { ContentAuthorizerDashboardComponent } from './views/pages/core/content-authorizer/dashboard/dashboard.component';
+import { ContentAuthorizerProfileComponent } from './views/pages/core/content-authorizer/profile/profile.component';
+import { ContentAuthorizationComponent } from './views/pages/core/content-authorizer/content-authorization/content-authorization.component';
+import { AuthorizationHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/authorization-history.component';
+import { ViewContentProvidersComponent } from './views/pages/core/content-authorizer/view-content-providers/ca-content-provider.component';
+import { ArticlesComponent } from './views/pages/core/content-authorizer/content-authorization/articles/ca-articles.component';
+import { AudioClipComponent } from './views/pages/core/content-authorizer/content-authorization/audio-clip/ca-audio-clip.component';
+import { BooksComponent } from './views/pages/core/content-authorizer/content-authorization/books/ca-books.component';
+import { CaseStudyComponent } from './views/pages/core/content-authorizer/content-authorization/case-study/ca-case-study.component';
+import { ImagesComponent } from './views/pages/core/content-authorizer/content-authorization/images/ca-images.component';
+import { VideoClipComponent } from './views/pages/core/content-authorizer/content-authorization/video-clip/ca-video-clip.component';
 
 
 export const routes: Routes = [
@@ -54,7 +65,21 @@ export const routes: Routes = [
   { path: 'submissions/cp-single-submission', component: SingleSubmissionComponent},
   { path: 'submissions/cp-multiple-submission', component: MultipleSubmissionComponent},
   { path: 'cp-history', component: ContentProviderHistoryComponent},
-  { path: '', redirectTo: 'cp-dashboard', pathMatch: 'full' }
+  { path: 'ca-dashboard', component: ContentAuthorizerDashboardComponent},
+  { path: 'ca-profile', component: ContentAuthorizerProfileComponent},
+  { path: 'ca-content-authorization', component: ContentAuthorizationComponent,
+  children: [
+    {path: 'ca-articles', component: ArticlesComponent},
+    {path: 'ca-audio-clip', component: AudioClipComponent},
+    {path: 'ca-books', component: BooksComponent},
+    {path: 'ca-case-study', component: CaseStudyComponent},
+    {path: 'ca-images', component: ImagesComponent},
+    {path: 'ca-video-clip', component: VideoClipComponent}
+  ]
+},
+  { path: 'ca-authorization-history', component: AuthorizationHistoryComponent},
+  { path: 'ca-content-providers', component: ViewContentProvidersComponent},
+  { path: '', redirectTo: 'ca-dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({

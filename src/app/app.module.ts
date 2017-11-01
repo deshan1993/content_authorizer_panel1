@@ -71,6 +71,17 @@ import { ContentProviderProfileComponent } from './views/pages/core/content-prov
 import { SingleSubmissionComponent } from './views/pages/core/content-provider/submissions/single-submission/single-submission.component';
 import { MultipleSubmissionComponent } from './views/pages/core/content-provider/submissions/multiple-submission/multiple-submission.component';
 import { ContentProviderHistoryComponent } from './views/pages/core/content-provider/history/content-provider-history.component';
+import { ContentAuthorizerDashboardComponent } from './views/pages/core/content-authorizer/dashboard/dashboard.component';
+import { ContentAuthorizerProfileComponent } from './views/pages/core/content-authorizer/profile/profile.component';
+import { ContentAuthorizationComponent } from './views/pages/core/content-authorizer/content-authorization/content-authorization.component';
+import { AuthorizationHistoryComponent } from './views/pages/core/content-authorizer/authorization-history/authorization-history.component';
+import { ViewContentProvidersComponent } from './views/pages/core/content-authorizer/view-content-providers/ca-content-provider.component';
+import { ArticlesComponent } from './views/pages/core/content-authorizer/content-authorization/articles/ca-articles.component';
+import { AudioClipComponent } from './views/pages/core/content-authorizer/content-authorization/audio-clip/ca-audio-clip.component';
+import { BooksComponent } from './views/pages/core/content-authorizer/content-authorization/books/ca-books.component';
+import { CaseStudyComponent } from './views/pages/core/content-authorizer/content-authorization/case-study/ca-case-study.component';
+import { ImagesComponent } from './views/pages/core/content-authorizer/content-authorization/images/ca-images.component';
+import { VideoClipComponent } from './views/pages/core/content-authorizer/content-authorization/video-clip/ca-video-clip.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: Http) {
@@ -110,7 +121,19 @@ export function startupServiceFactory(startupService: StartupService): Function 
     ContentProviderProfileComponent,
     SingleSubmissionComponent,
     MultipleSubmissionComponent,
-    ContentProviderHistoryComponent
+    ContentProviderHistoryComponent,
+
+    ContentAuthorizerDashboardComponent,
+    ContentAuthorizerProfileComponent,
+    ContentAuthorizationComponent,
+    AuthorizationHistoryComponent,
+    ViewContentProvidersComponent,
+    ArticlesComponent,
+    AudioClipComponent,
+    BooksComponent,
+    CaseStudyComponent,
+    ImagesComponent,
+    VideoClipComponent
   ],
   imports: [
     BrowserModule,

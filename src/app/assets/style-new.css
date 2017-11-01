@@ -142,3 +142,33 @@ div table{
   .slider.round:before {
     border-radius: 50%;
   }
+
+  div input{
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+  
+  div select{
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+  
+  div textarea{
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  #description1{
+    height: 100px;
+  }
+
+  /* style for text and button group */
+  .group-text{
+    height:30px;
+  }
+
+  .group-btn{
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }

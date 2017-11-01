@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Content Provider Panel</a>
+    <a class="navbar-brand" href="index.html">Content Authorizer Panel</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,55 +7,39 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" [routerLink]="['cp-dashboard']">
+          <a class="nav-link" [routerLink]="['ca-dashboard']">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profile">
-          <a class="nav-link" [routerLink]="['cp-profile']">
+          <a class="nav-link" [routerLink]="['ca-profile']">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">Profile</span>
           </a>
         </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Submissions">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#subList" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file-text-o"></i>
-            <span class="nav-link-text" [routerLink]="['submissions/cp-single-submission']">Submissions</span>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Content Authorization">
+          <a class="nav-link" [routerLink]="['ca-content-authorization']">
+            <i class="fa fa-fw fa-pencil-square-o"></i>
+            <span class="nav-link-text">Content Authorization</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="subList">
-            <li>
-              <a [routerLink]="['submissions/cp-single-submission']">Single Submission</a>
-            </li>
-            <li>
-              <a [routerLink]="['submissions/cp-multiple-submission']">Multiple Submission</a>
-            </li>
-          </ul>
         </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="History">
-          <a class="nav-link" [routerLink]="['cp-history']">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Authorization History">
+          <a class="nav-link" [routerLink]="['ca-authorization-history']">
             <i class="fa fa-fw fa-history"></i>
-            <span class="nav-link-text">Submission History</span>
+            <span class="nav-link-text">Authorization History</span>
           </a>
         </li>
 
-        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Authorizers' Details">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#authorList" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-user"></i>
-            <span class="nav-link-text" [routerLink]="['content-authorizer/view-authorizers']">Content Authorizer</span>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Content Providers' List">
+          <a class="nav-link" [routerLink]="['ca-content-providers']">
+            <i class="fa fa-fw fa-info-circle"></i>
+            <span class="nav-link-text">View Content Providers</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="authorList">
-            <li>
-              <a [routerLink]="['content-authorizer/view-authorizers']">View Authorizers</a>
-            </li>
-            <li>
-              <a [routerLink]="['content-authorizer/add-authorizers']">Add Authorizers</a>
-            </li>
-          </ul>
-        </li> -->
+        </li>
 
         <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Providers' Details">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#providerList" data-parent="#exampleAccordion">
