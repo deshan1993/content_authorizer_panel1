@@ -80,7 +80,8 @@ export const routes: Routes = [
     {path: 'ca-books', component: BooksComponent},
     {path: 'ca-case-study', component: CaseStudyComponent},
     {path: 'ca-images', component: ImagesComponent},
-    {path: 'ca-video-clip', component: VideoClipComponent}
+    {path: 'ca-video-clip', component: VideoClipComponent},
+    { path: '', redirectTo: 'ca-articles', pathMatch: 'full' }
   ]
 },
   { path: 'ca-authorization-history', component: AuthorizationHistoryComponent,
@@ -90,7 +91,8 @@ export const routes: Routes = [
     {path: 'ca-books-history', component: BooksHistoryComponent},
     {path: 'ca-case-study-history', component: CaseStudyHistoryComponent},
     {path: 'ca-images-history', component: ImagesHistoryComponent},
-    {path: 'ca-video-clip-history', component: VideoClipHistoryComponent}
+    {path: 'ca-video-clip-history', component: VideoClipHistoryComponent},
+    { path: '', redirectTo: 'ca-articles-history', pathMatch: 'full' }
   ]
 },
   { path: 'ca-content-providers', component: ViewContentProvidersComponent},

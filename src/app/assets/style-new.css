@@ -181,3 +181,9 @@ div table{
   div label{
 	  margin-top: 10px;
   }
+
+  .labelSub{
+    margin-left: 180px;
+    margin-top: 0px;
+   margin-bottom: 0px;
+  }
