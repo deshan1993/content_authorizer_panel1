@@ -35,7 +35,7 @@ button{
     font-size: 14px;
 }
 
-textarea{
+div textarea{
     font-size: 14px;
 }
 
@@ -186,4 +186,8 @@ div table{
     margin-left: 180px;
     margin-top: 0px;
    margin-bottom: 0px;
+  }
+
+  .descriptionTextArea{
+    font-size: 14px;
   }

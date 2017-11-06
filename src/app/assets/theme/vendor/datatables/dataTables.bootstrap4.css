@@ -48,7 +48,6 @@ div.dataTables_wrapper div.dataTables_filter label {
   text-align: left;
 }
 div.dataTables_wrapper div.dataTables_filter input {
-  width: 75%;
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -300,10 +299,10 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
   padding-right: 0;
 }
 .dataTables_length{
-  width: 50%;
+  width: 25%;
   float: left;
 }
 .dataTables_filter{
-  width: 50%;
+  width: 75%;
   float: right;
 }

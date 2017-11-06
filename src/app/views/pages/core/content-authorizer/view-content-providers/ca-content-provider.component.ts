@@ -16,7 +16,11 @@ export class ViewContentProvidersComponent implements OnInit{
     }
 
     dataTable(){
-        $('#dataTableProviders').DataTable();
+        $('#dataTableProviders').DataTable({
+            "language": {
+                "search" : "Search By: (Provider Name/ Institute Represented/ Subject Areas)"
+            }
+        });
     }
 
 }
