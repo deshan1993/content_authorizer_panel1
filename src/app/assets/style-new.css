@@ -43,6 +43,14 @@ div table{
     font-size: 14px;
 }
 
+div p{
+    font-size: 14px;
+}
+
+.list{
+    font-size: 14px;
+}
+
 .table-delete-button{
     padding-top: 4px;
     padding-bottom: 4px;
@@ -76,6 +84,15 @@ div table{
 .search_btn{
     width: 70px;
     border-radius: .25rem;
+}
+
+.edit_btn{
+    width: 70px;
+    border-radius: .25rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 30px;
+    width: 32px;
 }
 
 /*toggle button css*/
@@ -191,3 +208,4 @@ div table{
   .descriptionTextArea{
     font-size: 14px;
   }
+  
